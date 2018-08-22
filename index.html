@@ -5,6 +5,7 @@
     <script src="data_generator.js"></script>
   </head>
   <body>
+      
     <script>
 
       $(document).ready(function(){
@@ -16,11 +17,15 @@
           //will display the user's tweet per every iteration of the while loop
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          var $now = new Date();
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + $now);
           $tweet.appendTo($body);
           index -= 1;
         }
         //create button that will display tweets
+        var $button = $('<button>New Tweet</button>');
+        $button.appendTo($body);
+        
         //Display the timestamp of when the tweets were created.
         //Design your interface so that you want to look at and use the product you're making
         //Allow the user to click on a username to see that user's timeline
