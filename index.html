@@ -13,15 +13,39 @@
 
         var index = streams.home.length - 1;
         while(index >= 0){
+          //will display the user's tweet per every iteration of the while loop
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
           $tweet.text('@' + tweet.user + ': ' + tweet.message);
           $tweet.appendTo($body);
           index -= 1;
         }
+        //create button that will display tweets
+        //Display the timestamp of when the tweets were created.
+        //Design your interface so that you want to look at and use the product you're making
+        //Allow the user to click on a username to see that user's timeline
 
+
+        //
       });
 
     </script>
   </body>
 </html>
+
+
+
+
+<!--  
+1. Creates two global variables, 'users' and 'streams'
+  a. 'users' is an array of strings -all the usernames that you're following.
+    var users = ['username1', 'username2', 'username3']; 
+  b. 'streams' is an object with two properties, 'users' and 'home'.
+    //streams.home is an array of all tweets from all the users you're following.
+    var streams = {
+      users:{showndrost: ['tweets', 'tests'], douglascalhoun: ['tweets', 'tweets', 'tweets']}
+      home:['tweets of all users you're following', 'tweets', 'tweets'. 'tweets']
+    }
+    1.
+2. Kicks off a periodic process that puts more data in 'streams'.
+-->
